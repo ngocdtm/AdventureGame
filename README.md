@@ -1,6 +1,6 @@
 GHI CHÚ
 - AdventureGame.docx **gồm** Mọi thông tin chi tiết và hình ảnh minh họa màn hình của những chức năng
-- folder Player_Image **gồm** Hình ảnh nhân vật người chơi trong  ( vẽ qua webite [Piskel](https://www.piskelapp.com/) )
+- Folder Player_Image **gồm** Hình ảnh nhân vật người chơi trong  ( vẽ qua webite [Piskel](https://www.piskelapp.com/) )
 - Adventure.mdj **gồm** Activity diagram,Usecase minh họa cho các chức năng
 - Công cụ hỗ trợ: Eclipse (https://eclipseide.org/)
 
