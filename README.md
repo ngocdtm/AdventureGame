@@ -8,7 +8,7 @@ GHI CHÚ
 
   LƯU Ý: ĐỒ ÁN NÀY CHỈ MANG TÍNH CHẤT THAM KHẢO MÔ HÌNH GAME ĐÃ CÓ SẴN TRONG THỰC TẾ. 
 - Nhóm đã học hỏi, nghiên cứu và áp dụng vào đồ án, bên cạnh đó sáng tạo thêm những chức năng như:
-- +  Người chơi tàn hình khi ăn túp lều trong khoảng thời gian quy định và trở lại trạng thái như bình thường
+  +  Người chơi tàn hình khi ăn túp lều trong khoảng thời gian quy định và trở lại trạng thái như bình thường
   +  Cho phép người chơi có thể tự do chọn nhân vật
   +  Hiển thị só điểm trên màn hình
   +  Mỗi khi tăng level thì túi vật phẩm sẽ tăng lên 5 ô chứa vật phẩm mới, mỗi trang tối đa 20 vật phẩm
@@ -53,10 +53,15 @@ TÓM TẮT CÁC CHỨC NĂNG ĐÃ LÀM ĐƯỢC
 
 
 HƯỚNG PHÁT TRIỂN
+
 ●	Thêm chế độ PvE (Player versus Environment) với các mức độ Easy, Normal, Hard.
+
 ●	Bổ sung thêm chế độ nhiều vòng đấu (BO3: Best of 3 matches, BO5: Best of 5 matches). 
+
 ●	Bổ sung kho vũ khí và các item gia tăng sức mạnh cho nhân vật.
+
 ●	Phát triển thêm map mới, nhân vật mới mang lại sự đa dạng cho người chơi.
+
 ●	Cải thiện giao diện trò chơi hơn nữa. 
 
 
@@ -70,7 +75,7 @@ HƯỚNG PHÁT TRIỂN
 
 [4] Unity 2D - RPG Tutorial 2024 - Part 01 Adding Background (youtube.com)
 
-[5] 1 Sprite Creation with Piskel -- Unity 2D Platform Game (youtube.com)
+[5] Sprite Creation with Piskel -- Unity 2D Platform Game (youtube.com)
 
 [6] Piskel - Creating Tile Sets Part 2 (youtube.com)
 
