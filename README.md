@@ -4,7 +4,18 @@ GHI CHÚ
 - Adventure.mdj **gồm** Activity diagram,Usecase minh họa cho các chức năng
 - Công cụ hỗ trợ: Eclipse (https://eclipseide.org/)
 
-  
+
+
+  LƯU Ý: ĐỒ ÁN NÀY CHỈ MANG TÍNH CHẤT THAM KHẢO MÔ HÌNH GAME ĐÃ CÓ SẴN TRONG THỰC TẾ. 
+- Nhóm đã học hỏi, nghiên cứu và áp dụng vào đồ án, bên cạnh đó sáng tạo thêm những chức năng như:
+- +  Người chơi tàn hình khi ăn túp lều trong khoảng thời gian quy định và trở lại trạng thái như bình thường
+  +  Cho phép người chơi có thể tự do chọn nhân vật
+  +  Hiển thị só điểm trên màn hình
+  +  Mỗi khi tăng level thì túi vật phẩm sẽ tăng lên 5 ô chứa vật phẩm mới, mỗi trang tối đa 20 vật phẩm
+  +  Mỗi khi người chơi lên level mới sẽ mở thêm nhiều tính năng mới trong game
+  +  Và còn nhiều tính năng khác,...
+ 
+
 TÓM TẮT CÁC CHỨC NĂNG ĐÃ LÀM ĐƯỢC
 
 ●	Hoàn thành các chức năng cơ bản của game tấn công quái vật như: điều khiển nhân vật di chuyển, tấn công quái vật bằng rìu, kiếm, lửa, các cấp độ quái vật độ khó khác nhau tăng dần như: green slime, bat, orc, red slime, SkeletonLord (đây là quái vật khó tấn công nhất)
@@ -18,15 +29,25 @@ TÓM TẮT CÁC CHỨC NĂNG ĐÃ LÀM ĐƯỢC
 ●	Khi đứng quá gần quái vật thì nó sẽ đi theo người chơi và tấn công người chơi trong phạm vi cài đặt
 
 ●	Chức năng Retry, LoadGame
+
 ●	Cho phép người chơi có thể tự do chọn nhân vật.
+
 ●	Trò chuyện được với npc
+
 ●	Sau khi chơi game thua hết máu sẽ có chức năng GameOver
+
 ●	Chức năng knock: gõ vào quái vật sẽ văng ra xa
+
 ●	Các vật phẩm giúp ích như: Portion Red giúp hồi sinh máu, Tent giúp kích hoạt ban ngày nhanh hơn, Lantern là đèn chiếu sáng trong bóng tối, Shield Wood độ phòng thủ ít hơn Shield Blue, axe giúp chặt cây hoặc tấn công sát thương quái vật, ManaCrystal vật phẩm cung cấp lửa (Fireball), sword normal chỉ dùng để tấn công sát thương quái vật, pick Axe dùng để đâp tường, key dùng để mở cửa hoặc gương kho báu (chest)
+
 ●	Trao đổi vật phẩm: mua, bán vật phẩm trong túi vật phẩm
+
 ●	Đẩy các cục đá và hố và khi lấp đủ 3 hố sẽ mở được cửa
+
 ●	Những chức năng nhỏ: dùng trò chơi (pause), xem vị trí đứng, tăng chỉnh âm lượng nhạc, tắt bật fullScreen, tính năng bất tử (God Mode)
+
 ●	Tàn hình khi sử dụng lều trong vòng 10s
+
 ●	Mỗi khi tăng level thì túi vật phẩm sẽ tăng lên 5 ô chứa vật phẩm mới, mỗi trang tối đa 20 vật phẩm
 
 
@@ -59,12 +80,3 @@ HƯỚNG PHÁT TRIỂN
 [16] Unity Solutions for 2D | Unity
 [17] Bing Video 
 [18] Piskel - Free online sprite editor (piskelapp.com)
-
-LƯU Ý: ĐỒ ÁN NÀY CHỈ MANG TÍNH CHẤT THAM KHẢO MÔ HÌNH GAME ĐÃ CÓ SẴN TRONG THỰC TẾ. 
-- Nhóm đã học hỏi, nghiên cứu và áp dụng vào đồ án, bên cạnh đó sáng tạo thêm những chức năng như:
-- +  Người chơi tàn hình khi ăn túp lều trong khoảng thời gian quy định và trở lại trạng thái như bình thường
-  +  Cho phép người chơi có thể tự do chọn nhân vật
-  +  Hiển thị só điểm trên màn hình
-  +  Mỗi khi tăng level thì túi vật phẩm sẽ tăng lên 5 ô chứa vật phẩm mới, mỗi trang tối đa 20 vật phẩm
-  +  Mỗi khi người chơi lên level mới sẽ mở thêm nhiều tính năng mới trong game
-  +  Và còn nhiều tính năng khác,...
