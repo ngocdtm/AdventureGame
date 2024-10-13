@@ -1,5 +1,5 @@
 GHI CHÚ
-- AdventureGame.docx **gồm** Mọi thông tin chi tiết những chức năng và hình ảnh minh họa màn hình của những chức năng trong 
+- AdventureGame.docx **gồm** Mọi thông tin chi tiết và hình ảnh minh họa màn hình của những chức năng
 - folder Player_Image **gồm** Hình ảnh nhân vật người chơi trong  ( vẽ qua webite [Piskel](https://www.piskelapp.com/) )
 - Adventure.mdj **gồm** Activity diagram,Usecase minh họa cho các chức năng
 - Công cụ hỗ trợ: Eclipse (https://eclipseide.org/)
@@ -63,20 +63,37 @@ HƯỚNG PHÁT TRIỂN
 
   TÀI LIỆU THAM KHẢO
 [1] Lập trình game đi cảnh Mega Man trên Java Mở đầu (youtube.com)
+
 [2] Xây dựng game mario với unity (phần 6) | Mario game Unity | Hướng dẫn làm game Mario bằng Unity (youtube.com)
+
 [3] Best Way to Import 2D Sprites & Pixel Art - Unity 2018 Tutorial (youtube.com)
+
 [4] Unity 2D - RPG Tutorial 2024 - Part 01 Adding Background (youtube.com)
+
 [5] 1 Sprite Creation with Piskel -- Unity 2D Platform Game (youtube.com)
+
 [6] Piskel - Creating Tile Sets Part 2 (youtube.com)
+
 [7] Creating my first Walk Cycle - Pixel Art Loop in Piskel (youtube.com)
+
 [8] How to make a 2D Game in Unity (youtube.com)
+
 [9] 2D Movement in Unity (Tutorial) (youtube.com)
+
 [10] How to Get Started with Unity 2D Game Development | Unity
+
 [11] 2D Beginner: Adventure Game - Unity Learn
+
 [12] Unity - Manual: 2D game development quickstart guide (unity3d.com)
+
 [13] Learn How to Make a 2D Game in Unity Step-by-Step - Udemy Blog
+
 [14] Making 2D games with Unity for beginners – Ruby's Adventure (youtube.com)
+
 [15] 2D LEVEL DESIGN in Unity 2019! 🔥 Making a 2D Game Tutorial (youtube.com)
+
 [16] Unity Solutions for 2D | Unity
+
 [17] Bing Video 
+
 [18] Piskel - Free online sprite editor (piskelapp.com)
