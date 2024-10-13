@@ -6,6 +6,7 @@ GHI CHÚ
 
   
 TÓM TẮT CÁC CHỨC NĂNG ĐÃ LÀM ĐƯỢC
+
 ●	Hoàn thành các chức năng cơ bản của game tấn công quái vật như: điều khiển nhân vật di chuyển, tấn công quái vật bằng rìu, kiếm, lửa, các cấp độ quái vật độ khó khác nhau tăng dần như: green slime, bat, orc, red slime, SkeletonLord (đây là quái vật khó tấn công nhất)
 ●	Lưu lại được các level, mana, maxMana, life, maxLife, strength, coin, nextLevelExp, dexterity vào file save.dat và lưu FullScreen, Music Volume, SE Volume vào file config.txt
 ●	Tăng level sau khi Kinh nghiệm vượt qua mức level kế tiếp, có sự thay đổi khi lên level mới như: máu tăng, exp tăng, strength(càng cao thì độ gây sát thương quái vật càng lớn) tăng, dexterity(càng cao thì sát thương nhận càng ít) tăng. 
