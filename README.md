@@ -6,7 +6,7 @@ GHI CHÚ
 
 
 
-  LƯU Ý: ĐỒ ÁN NÀY CHỈ MANG TÍNH CHẤT THAM KHẢO MÔ HÌNH GAME ĐÃ CÓ SẴN TRONG THỰC TẾ. 
+LƯU Ý: ĐỒ ÁN NÀY CHỈ MANG TÍNH CHẤT THAM KHẢO MÔ HÌNH GAME ĐÃ CÓ SẴN TRONG THỰC TẾ. 
 - Nhóm đã học hỏi, nghiên cứu và áp dụng vào đồ án, bên cạnh đó sáng tạo thêm những chức năng như:
   +  Người chơi tàn hình khi ăn túp lều trong khoảng thời gian quy định và trở lại trạng thái như bình thường
   +  Cho phép người chơi có thể tự do chọn nhân vật
