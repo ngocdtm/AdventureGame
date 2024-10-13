@@ -8,10 +8,15 @@ GHI CHÚ
 TÓM TẮT CÁC CHỨC NĂNG ĐÃ LÀM ĐƯỢC
 
 ●	Hoàn thành các chức năng cơ bản của game tấn công quái vật như: điều khiển nhân vật di chuyển, tấn công quái vật bằng rìu, kiếm, lửa, các cấp độ quái vật độ khó khác nhau tăng dần như: green slime, bat, orc, red slime, SkeletonLord (đây là quái vật khó tấn công nhất)
+
 ●	Lưu lại được các level, mana, maxMana, life, maxLife, strength, coin, nextLevelExp, dexterity vào file save.dat và lưu FullScreen, Music Volume, SE Volume vào file config.txt
+
 ●	Tăng level sau khi Kinh nghiệm vượt qua mức level kế tiếp, có sự thay đổi khi lên level mới như: máu tăng, exp tăng, strength(càng cao thì độ gây sát thương quái vật càng lớn) tăng, dexterity(càng cao thì sát thương nhận càng ít) tăng. 
+
 ●	Xây dựng nhiều map và xem được miniMap để dễ dàng di chuyển, tạo hoạt ảnh cho nhân vật game (đứng yên, đi, tấn công bằng kiếm, chặt cây bằng rìu), dùng lều để kích hoạt thời gian sáng nhanh hơn
+
 ●	Khi đứng quá gần quái vật thì nó sẽ đi theo người chơi và tấn công người chơi trong phạm vi cài đặt
+
 ●	Chức năng Retry, LoadGame
 ●	Cho phép người chơi có thể tự do chọn nhân vật.
 ●	Trò chuyện được với npc
