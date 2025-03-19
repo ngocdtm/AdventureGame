@@ -1,4 +1,4 @@
-package State;
+package state.day_state;
 
 import java.awt.Color;
 import java.awt.Graphics2D;

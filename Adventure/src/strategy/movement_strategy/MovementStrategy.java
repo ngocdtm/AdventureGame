@@ -1,4 +1,4 @@
-package strategy;
+package strategy.movement_strategy;
 
 import entity.Entity;
 

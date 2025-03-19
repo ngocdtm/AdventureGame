@@ -1,4 +1,4 @@
-package singleton;
+package singleton.dialogue_singleton;
 
 import main.GamePanel;
 
