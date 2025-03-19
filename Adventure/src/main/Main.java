@@ -17,7 +17,7 @@ public class Main
 		window.setTitle("Game Project");//set up title
 	//	window.setUndecorated(true);//hide button exist above window
 		//new Main().setIcon();
-		GamePanel gamePanel = new GamePanel();
+		GamePanel gamePanel = GamePanel.getInstance();
 		window.add(gamePanel); 
 		
 		gamePanel.config.loadConfig();

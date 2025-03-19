@@ -101,7 +101,7 @@ public class Home extends javax.swing.JFrame {
 		window.setResizable(false);//can't  change different size window
 		window.setTitle("Game Project");//set up title
 		
-		GamePanel gamePanel = new GamePanel();
+		GamePanel gamePanel = GamePanel.getInstance();
 //		window.setUser();
 		window.add(gamePanel);
 		
@@ -165,7 +165,7 @@ public class Home extends javax.swing.JFrame {
 		window.setTitle("Game Project");//set up title
 	//	window.setUndecorated(false);//hide button exist above window
 		
-		GamePanel gamePanel = new GamePanel();
+		GamePanel gamePanel = GamePanel.getInstance();
 		window.add(gamePanel);
 		
 		window.pack();//đóng gói to see screen
