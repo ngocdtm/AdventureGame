@@ -1,14 +1,3 @@
-/sound/
-/ai/
-/data/
 /entity/
-/environment/
-/factory/
 /main/
-/module-info.class
-/monster/
-/object/
-/tile/
-/tile_interactive/
-/tiles/
-/tiles_interactive/
+/strategy/
