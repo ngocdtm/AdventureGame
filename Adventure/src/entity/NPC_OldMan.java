@@ -4,6 +4,7 @@ import java.awt.Rectangle;
 import java.util.Random;
 
 import main.GamePanel;
+import strategy.RandomMovement;
 
 public class NPC_OldMan extends Entity
 {
@@ -26,6 +27,7 @@ public class NPC_OldMan extends Entity
 		
 		getImage();
 		setDialogue();
+		setMovementStrategy(new RandomMovement()); // Mặc định di chuyển ngẫu nhiên
 	}
 	public void getImage() {
 		up1 = setup("/npc/oldman_up_1", gp.tileSize, gp.tileSize);

@@ -2,12 +2,12 @@ package main;
 
 import data.Progress;
 import entity.Entity;
+import singleton.EventDialogueManager;
 
 public class EventHandler 
 {
 	GamePanel gp;
 	EventRect eventRect[][][];
-	Entity eventMaster;
 	
 	int previousEventX, previousEventY;
 	boolean canTouchEvent = true;
@@ -17,7 +17,6 @@ public class EventHandler
 	{
 		this.gp = gp;
 		
-		eventMaster = new Entity(gp);
 		eventRect = new EventRect[gp.maxMap][gp.maxWorldCol][gp.maxWorldRow];
 		
 		int map = 0;
@@ -43,22 +42,8 @@ public class EventHandler
 				}
 			}
 		}
-		
-		setDialogue();
 	}
-	
-	public void setDialogue()
-	{
-		eventMaster.dialogues[0][0] = "You fail into a pit!";
-		
-		eventMaster.dialogues[1][0] = "You drink the water.\nYour life and mana have been recovered. \n"
-				+ "(The progess has been saved)";
-		eventMaster.dialogues[1][1] = "OMG, this is good water.";
-		
-		eventMaster.dialogues[2][0] = "To enter this area you need to be level 3!";
-		
-		eventMaster.dialogues[3][0] = "To enter this area you need to be level 5!";
-	}
+
 	public void checkEvent()
 	{
 		//check if the player character is more than 1 tile away from the last event
@@ -87,7 +72,7 @@ public class EventHandler
 				}
 				else
 				{
-					eventMaster.startDialogue(eventMaster, 2);
+					EventDialogueManager.getInstance().startDialogue(gp, 2);
 				}
 			} 
 			else if(hit(1,12,13,"any") == true) {teleport(0,10,39, gp.outside);} // to outside
@@ -102,7 +87,7 @@ public class EventHandler
 				}
 				else
 				{
-					eventMaster.startDialogue(eventMaster, 3);
+					EventDialogueManager.getInstance().startDialogue(gp, 3);
 				}
 						
 			} 
@@ -159,7 +144,7 @@ public class EventHandler
 	{
 		gp.gameState = gameState;
 		gp.playSE(6);;
-		eventMaster.startDialogue(eventMaster, 0);
+		EventDialogueManager.getInstance().startDialogue(gp, 0);
 		gp.player.life -= 1;
 //		eventRect[col][row].eventDone = true;
 		canTouchEvent = false;//prevent collision pit again
@@ -173,7 +158,7 @@ public class EventHandler
 			gp.gameState = gameState;
 			gp.player.attackCanceled = true;
 			gp.playSE(2);
-			eventMaster.startDialogue(eventMaster, 1);
+			EventDialogueManager.getInstance().startDialogue(gp, 1);
 			gp.player.life = gp.player.maxLife;
 			gp.player.mana = gp.player.maxMana;
 			gp.aSetter.setMonster();
