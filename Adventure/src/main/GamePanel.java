@@ -26,6 +26,7 @@ import tile_interactive.InteractiveTile;
 
 public class GamePanel extends JPanel implements Runnable
 {
+	 private static volatile GamePanel instance;
 		//Screen settings
 		final int originalTileSize = 16; //16x16
 		final int scale = 3;
@@ -122,7 +123,7 @@ public class GamePanel extends JPanel implements Runnable
 		int playerSpeed = 4;
 		public int dialoqueState;
 
-		public GamePanel() 
+		private GamePanel() 
 		{
 			player.playerType = "boy";
 //			user.setUser();
@@ -132,6 +133,19 @@ public class GamePanel extends JPanel implements Runnable
 			this.addKeyListener(keyH);//nhan phim
 			this.setFocusable(true);		
 		}
+		 
+		 
+	    public static GamePanel getInstance() {
+	        if (instance == null) {
+	            synchronized (GamePanel.class) { 
+	                if (instance == null) {
+	                    instance = new GamePanel();
+	                }
+	            }
+	        }
+	        return instance;
+	    }
+	    
 		public void setupGame() 
 		{
 			player.getImage();  // Thêm dòng này
