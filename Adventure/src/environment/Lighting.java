@@ -5,6 +5,9 @@ import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.RadialGradientPaint;
 import java.awt.image.BufferedImage;
+
+import State.Day;
+import State.DayState;
 import main.GamePanel;
 
 
@@ -14,6 +17,7 @@ public class Lighting
 	BufferedImage darknessFilter;
 	public int dayCounter;
 	public float filterAlpha = 0f;
+	private DayState state;
 	
 	public final int day = 0;
 	public final int dusk = 1;
@@ -21,11 +25,16 @@ public class Lighting
 	public final int dawn = 3;
 	public int dayState = day;
 
-	public Lighting(GamePanel gp)
-	{
-		this.gp = gp;
-		setLightSource();
-	}
+	public Lighting(GamePanel gp) {
+        this.gp = gp;
+        this.state = new Day(); // Start with the Day state
+        setLightSource();
+    }
+	
+	public void setState(DayState state) {
+        this.state = state;
+    }
+	
 	public void setLightSource()
 	{
 		// Create a buffered image
@@ -85,59 +94,18 @@ public class Lighting
 	}
 	public void resetDay()
 	{
+		dayCounter = 0;
 		dayState = day;
 		filterAlpha = 0f;
 	}
-	public void update()
-	{
-		if (gp.player.lightUpdated == true)
-		{
-			setLightSource();
-			gp.player.lightUpdated = false;
-		}
-		
-		// Check the state of the day
-		if (dayState == day)
-		{
-			dayCounter++;
-			
-			if(dayCounter > 1200) // 600 = 10 giây   // 36000 = 10 min
-			{
-				dayState = dusk;
-				dayCounter = 0;
-			}
-		}
-		if (dayState == dusk)
-		{
-			filterAlpha += 0.001f; // thời gian chuyển đổi giữa các trạng thái
-			
-			if(filterAlpha > 1f)
-			{
-				filterAlpha = 1f;
-				dayState = night;
-			}
-		}
-		if (dayState == night)
-		{
-			dayCounter++;
-			
-			if(dayCounter > 600)
-			{
-				dayState = dawn;
-				dayCounter = 0;
-			}
-		}
-		if (dayState == dawn)
-		{
-			filterAlpha -= 0.001f;
-			
-			if (filterAlpha < 0)
-			{
-				filterAlpha = 0;
-				dayState = day;
-			}
-		}
-	}
+	public void update() {
+        if (gp.player.lightUpdated) {
+            setLightSource();
+            gp.player.lightUpdated = false;
+        }
+        state.update(this); // Call update from the current state
+    }
+	
 	public void draw(Graphics2D g2)
 	{
 		if (gp.currentArea == gp.outside)
@@ -153,15 +121,6 @@ public class Lighting
 		// DUBUG
 		String situation = "";
 		
-		switch (dayState)
-		{
-		case day: situation = "Day"; break;
-		case dusk: situation = "Dusk"; break;
-		case night: situation = "Night"; break;
-		case dawn: situation = "Dawn"; break;
-		}
-		g2.setColor(Color.white);
-		g2.setFont(g2.getFont().deriveFont(50f));
-		g2.drawString(situation, 800, 500);
+		state.draw(g2, this);  // Call draw from the current state
 	}
 }
