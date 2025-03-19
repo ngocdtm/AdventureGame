@@ -13,8 +13,10 @@ import javax.imageio.ImageIO;
 
 import main.GamePanel;
 import main.UtilityTool;
+import strategy.IdleMovement;
+import strategy.MovementStrategy;
 
-public class Entity 
+public abstract class Entity 
 {
 	GamePanel gp;
 	public BufferedImage up1, up2, down1, down2, left1, left2, right1, right2;
@@ -119,10 +121,23 @@ public class Entity
 	public final int type_light = 9;
 	public final int type_pickaxe = 10;
 	
-	public Entity(GamePanel gp) 
-	{
-		this.gp = gp;
-	}
+	protected MovementStrategy movementStrategy;
+
+    public Entity(GamePanel gp) {
+        this.gp = gp;
+        this.movementStrategy = new IdleMovement(); // Default movement is idle
+    }
+    
+    public void setMovementStrategy(MovementStrategy strategy) {
+        this.movementStrategy = strategy;
+    }
+    
+	public void setAction() {
+        if (movementStrategy != null) {
+            movementStrategy.move(this);
+        }
+    }
+	
 	public int getScreenX()
 	{
 		int screenX = worldX - gp.player.worldX + gp.player.screenX;// screenX = -500
@@ -205,10 +220,6 @@ public class Entity
 		offBalanceCounter = 0;
 	}
 	public void setLoot(Entity loot)
-	{
-		
-	}
-	public void setAction() 
 	{
 		
 	}
