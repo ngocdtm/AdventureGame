@@ -13,8 +13,8 @@ import javax.imageio.ImageIO;
 
 import main.GamePanel;
 import main.UtilityTool;
-import strategy.IdleMovement;
-import strategy.MovementStrategy;
+import strategy.movement_strategy.IdleMovement;
+import strategy.movement_strategy.MovementStrategy;
 
 public abstract class Entity 
 {

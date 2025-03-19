@@ -6,9 +6,9 @@ import java.awt.Graphics2D;
 import java.awt.RadialGradientPaint;
 import java.awt.image.BufferedImage;
 
-import State.Day;
-import State.DayState;
 import main.GamePanel;
+import state.day_state.Day;
+import state.day_state.DayState;
 
 
 public class Lighting 

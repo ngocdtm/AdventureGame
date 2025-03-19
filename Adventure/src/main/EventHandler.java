@@ -2,7 +2,7 @@ package main;
 
 import data.Progress;
 import entity.Entity;
-import singleton.EventDialogueManager;
+import singleton.dialogue_singleton.EventDialogueManager;
 
 public class EventHandler 
 {

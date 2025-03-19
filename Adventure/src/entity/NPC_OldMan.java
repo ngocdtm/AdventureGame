@@ -4,7 +4,7 @@ import java.awt.Rectangle;
 import java.util.Random;
 
 import main.GamePanel;
-import strategy.RandomMovement;
+import strategy.movement_strategy.RandomMovement;
 
 public class NPC_OldMan extends Entity
 {
