@@ -13,7 +13,7 @@ public class Sound
 	Clip clip;
 	URL soundURL[] = new URL[30];
 	FloatControl fc;
-	int volumeScale = 3; // âm lượng mặc định
+	public int volumeScale = 3; // âm lượng mặc định
 	float volume;
 	
 	public Sound() 

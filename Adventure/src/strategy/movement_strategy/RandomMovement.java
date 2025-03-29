@@ -2,6 +2,7 @@ package strategy.movement_strategy;
 
 import java.util.Random;
 
+
 import entity.Entity;
 
 public class RandomMovement implements MovementStrategy {

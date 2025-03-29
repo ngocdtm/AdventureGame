@@ -9,10 +9,11 @@ import object.OBJ_Coin_Bronze;
 import object.OBJ_Door_Iron;
 import object.OBJ_Heart;
 import object.OBJ_ManaCrystal;
+import state.monster_state.SkeletonLordIdle;
 
 public class MON_SkeletonLord extends Entity
 {
-	GamePanel gp;
+	public GamePanel gp;
 	public static final String monName = "Skeleton Lord";
 	
 	public MON_SkeletonLord(GamePanel gp) 
@@ -45,7 +46,7 @@ public class MON_SkeletonLord extends Entity
 		attackArea.height = 170;
 		motion1_duration = 25;
 		motion2_duration = 50;
-		
+		state = new SkeletonLordIdle();
 		getImage();
 		getAttackImage();
 		setDialogue()
@@ -111,34 +112,7 @@ public class MON_SkeletonLord extends Entity
 		dialogues[0][1] = "You will die here!";
 		dialogues[0][2] = "WELCOME TO YOUR DOOM!";
 	}
-	public void setAction() 
-	{	
-		if ( inRange == false && life < maxLife/2)
-		{
-			inRange = true;
-			getImage();
-			getAttackImage();
-			defaultSpeed++;
-			speed = defaultSpeed;
-			attack *= 2;
-		}
-		if (getTileDistance(gp.player) < 10)
-		{
-			moveTowardPlayer(60);
-		}
-		else
-		{
-			// Get a random direction
-			getRandomDirection(120);
-		}
-		
-		// Check if it attacks
-		if (attacking == false)
-		{
-			checkAttackOrNot(60, gp.tileSize*7, gp.tileSize*5); // 30: monster hung han
-		}
-				
-	}
+
 	public void damageReaction() 
 	{//attack player after receive damage	
 		actionLockCounter = 0;

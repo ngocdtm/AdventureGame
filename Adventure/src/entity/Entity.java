@@ -13,6 +13,8 @@ import javax.imageio.ImageIO;
 
 import main.GamePanel;
 import main.UtilityTool;
+import state.monster_state.GreenMonsterIdle;
+import state.monster_state.MonsterBehaviorState;
 import strategy.movement_strategy.IdleMovement;
 import strategy.movement_strategy.MovementStrategy;
 
@@ -27,7 +29,7 @@ public abstract class Entity
 	public Rectangle solidArea = new Rectangle(0, 0, 48, 48);//default area for all entities
 	public Rectangle attackArea = new Rectangle(0,0,0,0);
 	public int solidAreaDefaultX, solidAreaDefaultY;
-	public boolean collision = false;
+	public boolean collision = false;	
 	public String dialogues[][] = new String[20][20];
 	public Entity attacker;
 	public Entity linkedEntity;
@@ -56,7 +58,7 @@ public abstract class Entity
 	public boolean inRange = false;
 	public boolean sleep = false;
 	public boolean drawing = true;
-	
+	protected MonsterBehaviorState state;
 	//COUNTER
 	public int spriteCounter = 0;
 	public int actionLockCounter = 0;
@@ -126,10 +128,15 @@ public abstract class Entity
     public Entity(GamePanel gp) {
         this.gp = gp;
         this.movementStrategy = new IdleMovement(); // Default movement is idle
+        this.state = new GreenMonsterIdle();
     }
     
     public void setMovementStrategy(MovementStrategy strategy) {
         this.movementStrategy = strategy;
+    }
+    
+    public void setState(MonsterBehaviorState state) {
+        this.state = state;
     }
     
 	public void setAction() {
@@ -372,6 +379,9 @@ public abstract class Entity
 				setAction();
 				checkCollision();
 				
+				state.updateBehavior(this);
+                state.checkTransition(this);
+                
 				//IF COLLISION IS FALSE, PLAYER CAN MOVE		
 				if(collisionOn == false) 
 				{	

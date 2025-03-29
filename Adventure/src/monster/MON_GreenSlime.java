@@ -8,6 +8,7 @@ import object.OBJ_Coin_Bronze;
 import object.OBJ_Heart;
 import object.OBJ_ManaCrystal;
 import object.OBJ_Rock;
+import state.monster_state.GreenMonsterIdle;
 
 public class MON_GreenSlime extends Entity 
 {
@@ -35,7 +36,7 @@ public class MON_GreenSlime extends Entity
 		solidArea.height = 30;
 		solidAreaDefaultX = solidArea.x;
 		solidAreaDefaultY = solidArea.y;
-		
+		state = new GreenMonsterIdle(); 
 		getImage();
 	}
 	
@@ -50,35 +51,13 @@ public class MON_GreenSlime extends Entity
 		right1 = setup("/monster/greenslime_down_1", gp.tileSize, gp.tileSize);
 		right2 = setup("/monster/greenslime_down_2", gp.tileSize, gp.tileSize);		
 	}
-	public void setAction() 
-	{	
-		if (onPath == true)
-		{
-			// nếu khoảng cách người chơi > 20 thì monster ngừng truy đuổi
-			checkStopChasingOrNot(gp.player, 15, 100);
-		
-			// monster đi theo player
-			searchPath(getGoalCol(gp.player), getGoalRow(gp.player));
-			
-			// Check if it shoots a projectile
-			//checkShootOrNot(200, 30);
-		}
-		else
-		{
-			// monster bắt đầu truy đuổi
-			checkStartChasingOrNot(gp.player, 5, 100);
-			
-			// Get a random direction
-			getRandomDirection(120);
-		}
-				
-	}
+
 	public void damageReaction() 
 	{//attack player after receive damage
 		
 		actionLockCounter = 0;
 //		direction = gp.player.direction;
-		onPath = true;
+		onPath = true;// Chuyển sang trạng thái đuổi khi bị tấn công
 	}
 	public void checkDrop() 
 	{
