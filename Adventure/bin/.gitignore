@@ -1,12 +1,2 @@
-/monster/
-/object/
-/tile/
-/tile_interactive/
 /entity/
-/main/
-/strategy/
-/State/
-/environment/
-/_state/
-/state/
-/singleton/
+/monster/

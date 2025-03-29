@@ -62,13 +62,13 @@ public class GamePanel extends JPanel implements Runnable
 		//SYSTEM
 		public TileManager tileM = new TileManager(this);
 		public KeyHandler keyH= new KeyHandler(this);
-		SaveLoad saveLoad = new SaveLoad(this);
+		public SaveLoad saveLoad = new SaveLoad(this);
 		public EntityGenerator eGenerator = new EntityGenerator(this);
 		public CutsceneManager csManager = new CutsceneManager(this);
 		
 		//SOUND
-		Sound music = new Sound();
-		Sound se = new Sound();
+		public Sound music = new Sound();
+		public Sound se = new Sound();
 		
 		public CollisionChecker cChecker = new CollisionChecker(this);
 		public AssetSetter aSetter = new AssetSetter(this);
@@ -78,7 +78,7 @@ public class GamePanel extends JPanel implements Runnable
 		Config config = new Config(this);
 		public PathFinder pFinder = new PathFinder(this);
 		EnvironmentManager eManager = new EnvironmentManager(this);
-		Map map = new Map(this);
+		public Map map = new Map(this);
 		Thread gameThread;
 		
 		//ENTITY AND OBJECT

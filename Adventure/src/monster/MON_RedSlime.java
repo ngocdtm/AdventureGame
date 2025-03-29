@@ -2,12 +2,14 @@ package monster;
 
 import java.util.Random;
 
+
 import entity.Entity;
 import main.GamePanel;
 import object.OBJ_Coin_Bronze;
 import object.OBJ_Heart;
 import object.OBJ_ManaCrystal;
 import object.OBJ_Rock;
+import state.monster_state.RedSlimeIdle;
 
 public class MON_RedSlime extends Entity 
 {
@@ -36,7 +38,7 @@ public class MON_RedSlime extends Entity
 		solidArea.height = 30;
 		solidAreaDefaultX = solidArea.x;
 		solidAreaDefaultY = solidArea.y;
-		
+		state = new RedSlimeIdle();
 		getImage();
 	}
 	
@@ -51,29 +53,7 @@ public class MON_RedSlime extends Entity
 		right1 = setup("/monster/redslime_down_1", gp.tileSize, gp.tileSize);
 		right2 = setup("/monster/redslime_down_2", gp.tileSize, gp.tileSize);		
 	}
-	public void setAction() 
-	{	
-		if (onPath == true)
-		{
-			// nếu khoảng cách người chơi > 20 thì monster ngừng truy đuổi
-			checkStopChasingOrNot(gp.player, 15, 100);
-		
-			// monster đi theo player
-			searchPath(getGoalCol(gp.player), getGoalRow(gp.player));
-			
-			// Check if it shoots a projectile
-			checkShootOrNot(200, 30);
-		}
-		else
-		{
-			// monster bắt đầu truy đuổi
-			checkStartChasingOrNot(gp.player, 5, 100);
-			
-			// Get a random direction
-			getRandomDirection(120);
-		}
-				
-	}
+
 	public void damageReaction() 
 	{//attack player after receive damage
 		
